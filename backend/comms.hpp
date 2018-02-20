@@ -1,7 +1,7 @@
 #pragma once
 
 #include "dijkstra.hpp"
-#include "socket.hpp"
+#include <fscompsoc/net/socket.hpp>
 
 #include <functional>
 #include <future>
