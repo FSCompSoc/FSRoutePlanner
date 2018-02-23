@@ -4,14 +4,14 @@
 #include <fscompsoc/net/socket.hpp>
 
 #include <functional>
-#include <future>
+#include <memory>
 #include <vector>
 #include <cstdint>
 
 namespace fscompsoc::route_planner {
   class table_server {
   private:
-    net::any_socket_server _server;
+    std::unique_ptr<net::any_socket_server> _server;
 
   public:
     std::future<graph> get_graph();
